@@ -3,22 +3,24 @@ import { BrowserRouter, Route } from "react-router-dom";
 import {
   navBar,
   mainBody,
-  about,
-  repos,
-  leadership,
-  skills,
+  projectinfo,
+  background,
+  overview,
+  questions,
+  whyask,
+  impact,
   getInTouch,
 } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
-import AboutMe from "./components/home/AboutMe";
-import Project from "./components/home/Project";
+import ProjectInfo from "./components/home/ProjectInfo";
+import BackgroundInfo from "./components/home/BackgroundInfo";
+import Overview from "./components/home/Overview";
+import Questions from "./components/home/Questions.jsx";
+import WhyAsk from "./components/home/WhyAsk.jsx";
+import Impact from "./components/home/Impact.jsx";
+import GetInTouch from "./components/home/GetInTouch.jsx";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Skills from "./components/home/Skills";
-// import { Blog } from "./components/blog/Blog";
-// import BlogPost from "./components/blog/BlogPost";
-import GetInTouch from "./components/home/GetInTouch.jsx";
-import Leadership from "./components/home/Leadership.jsx";
 
 const Home = React.forwardRef((props, ref) => {
   return (
@@ -30,36 +32,52 @@ const Home = React.forwardRef((props, ref) => {
         icons={mainBody.icons}
         ref={ref}
       />
-      {about.show && (
-        <AboutMe
-          heading={about.heading}
-          message={about.message}
-          link={about.imageLink}
-          imgSize={about.imageSize}
-          resume={about.resume}
+      {projectinfo.show && (
+        <ProjectInfo
+          heading={projectinfo.heading}
+          message={projectinfo.message}
+          link={projectinfo.imageLink}
+          imgSize={projectinfo.imageSize}
+          resume={projectinfo.resume}
         />
       )}
-      {repos.show && (
-        <Project
-          heading={repos.heading}
-          username={repos.gitHubUsername}
-          length={repos.reposLength}
-          specfic={repos.specificRepos}
+      {background.show && (
+        <BackgroundInfo
+          heading={background.heading}
+          username={background.gitHubUsername}
+          length={background.reposLength}
+          specfic={background.specificRepos}
         />
       )}
-      {leadership.show && (
-        <Leadership
-          heading={leadership.heading}
-          message={leadership.message}
-          img={leadership.images}
-          imageSize={leadership.imageSize}
+      {overview.show && (
+        <Overview
+          heading={overview.heading}
+          hardSkills={overview.hardSkills}
+          softSkills={overview.softSkills}
         />
       )}
-      {skills.show && (
-        <Skills
-          heading={skills.heading}
-          hardSkills={skills.hardSkills}
-          softSkills={skills.softSkills}
+      {questions.show && (
+        <Questions
+          heading={questions.heading}
+          message={questions.message}
+          img={questions.images}
+          imageSize={questions.imageSize}
+        />
+      )}
+      {whyask.show && (
+        <WhyAsk
+          heading={whyask.heading}
+          message={whyask.message}
+          img={whyask.images}
+          imageSize={whyask.imageSize}
+        />
+      )}
+      {impact.show && (
+        <Impact
+          heading={impact.heading}
+          message={impact.message}
+          img={impact.images}
+          imageSize={impact.imageSize}
         />
       )}
     </>

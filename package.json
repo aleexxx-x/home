@@ -1,13 +1,13 @@
 {
-  "name": "developers-portfolio",
-  "description": "A personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects.",
-  "homepage": "http://hashirshoaeb.com",
+  "name": "wireless-internet-analysis",
+  "description": "A blog-based website built to to engage in a critical analysis of a device, machine, technique, practice, or technological system: Wireless Internet.",
+  "homepage": "https://aleexxx-x.github.io/home",
   "version": "2.0.0",
   "private": true,
   "author": {
-    "name": "Hashir Shoaib",
-    "email": "hashirshoaeb@gmail.com",
-    "url": "https://github.com/hashirshoaeb"
+    "name": "Alexandria Howell",
+    "email": "howell.522@osu.edu",
+    "url": "https://github.com/aleexxx-x"
   },
   "dependencies": {
     "axios": "^0.19.2",

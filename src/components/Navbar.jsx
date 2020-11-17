@@ -40,46 +40,57 @@ const Navigation = React.forwardRef((props, ref) => {
       expand="lg"
     >
       <Navbar.Brand className="brand" href={process.env.PUBLIC_URL + "/#home"}>
-        {`<${mainBody.firstName} />`}
+        {`< Home />`}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          {/* {
-            <Nav.Link className="nav-link lead">
-              <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
-            </Nav.Link>
-          } */}
-          {repos.show && (
+          {projectinfo.show && (
             <Nav.Link
               className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#projects"}
+              href={process.env.PUBLIC_URL + "/#projectinfo"}
             >
-              Projects
+              Project Information
             </Nav.Link>
           )}
-          <Nav.Link
-            className="nav-link lead"
-            href={about.resume}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Resume
-          </Nav.Link>
-          {about.show && (
+          {background.show && (
             <Nav.Link
               className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#aboutme"}
+              href={process.env.PUBLIC_URL + "/#background"}
             >
-              About
+              Background Information
             </Nav.Link>
           )}
-          {skills.show && (
+          {overview.show && (
             <Nav.Link
               className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#skills"}
+              href={process.env.PUBLIC_URL + "/#overview"}
             >
-              Skills
+              Overview of Wireless Internet 
+            </Nav.Link>
+          )}
+          {questions.show && (
+            <Nav.Link
+              className="nav-link lead"
+              href={process.env.PUBLIC_URL + "/#questions"}
+            >
+              Analysis 
+            </Nav.Link>
+          )}
+          {whyask.show && (
+            <Nav.Link
+              className="nav-link lead"
+              href={process.env.PUBLIC_URL + "/#whyask"}
+            >
+              Effects of Analysis 
+            </Nav.Link>
+          )}
+          {impact.show && (
+            <Nav.Link
+              className="nav-link lead"
+              href={process.env.PUBLIC_URL + "/#impact"}
+            >
+              Impact of Analysis 
             </Nav.Link>
           )}
         </Nav>
